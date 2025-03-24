@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import reactLogo from './assets/ethanbotton.png'
 import viteLogo from '/vite.svg'
 import './App.css'
 
@@ -16,7 +16,8 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Luke + Ethan (My roomate, he said it's cool if I use the picture)</h1>
+      <h1>Luke + Ethan
+        (My roomate, he said it's cool if I use the picture)</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count - 1)}>
           count, but actually it's negative {count}
