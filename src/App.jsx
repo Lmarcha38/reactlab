@@ -77,8 +77,28 @@ function MoreImages() {
 </div>);
 }
 
+function SuperCounters(){
+  const [superCount, superCountInc] = useState(0)
+
+  return (
+  <div>
+    <h3>Super Count: {superCount}</h3>
+    <button onClick={() => superCountInc((superCount) => superCount + 1)}>
+     increase
+    </button>
+    <button onClick={() => superCountInc((superCount) => superCount - 1)}>
+    decrease
+    </button>
+    <button onClick={() => superCountInc((superCount) => superCount = 0)}>
+    zero
+    </button>
+  </div>
+  )
+}
+
 function App() {
   const [count, setCount] = useState(0)
+  
 
   return (
     <>
@@ -106,6 +126,7 @@ function App() {
       <MagicButtons />
       <ZineRack />
       <MoreImages />
+      <SuperCounters />
     </>
   )
 }
