@@ -3,10 +3,78 @@ import reactLogo from './assets/ethanbotton.png'
 import viteLogo from './assets/me.png'
 import './App.css'
 
-function MagicButton() {
-  return (
-    <button>Magic</button>
+const games = [
+  { id: 1, title: 'Fortnite', theme: 'Battle Royale', onPC: true},
+  { id: 2, title: 'Minecraft', theme: 'Sandbox', onPC: true},
+  { id: 3, title: 'Super Mario Bros.', theme: 'Platformer', onPC: false},
+  { id: 4, title: 'Celeste', theme: 'Platformer', onPC: true},
+];
+
+function ZineRack() {
+  const pcAvailable = games.map(game =>
+    <li
+      key={game.id}
+      style={{
+        color: game.onPC ? 'green' : 'red'
+      }}
+    >
+      {game.title}
+    </li>
   );
+  const isPlatformer = games.map(game =>
+    <li
+      key={game.id}
+      style={{
+        color: game.theme == 'Platformer' ? 'green' : 'red'
+      }}
+    >
+      {game.title}
+    </li>
+  );
+  return (
+    <div>
+      <h3>Are these video games available on windows PC?</h3>
+      <ul>{pcAvailable}</ul>
+      <h3>Are these video games platformers?</h3>
+      <ul>{isPlatformer}</ul>
+    </div>
+  )
+}
+
+function MagicButtons() {
+  return (
+    <div>
+      <h3>These are magic buttons</h3>
+      <button>Magic</button>
+      <button>Magic</button>
+      <button>Magic</button>
+      <button>Magic</button>
+    </div>
+  );
+}
+
+function MoreImages() {
+  return(
+  <div>
+  <a href="https://react.dev" target="_blank">
+    <img src={reactLogo} className="logo react" alt="React logo" />
+  </a>
+  <a href="https://react.dev" target="_blank">
+    <img src={viteLogo} className="logo react" alt="React logo" />
+  </a>
+  <a href="https://react.dev" target="_blank">
+    <img src={reactLogo} className="logo react" alt="React logo" />
+  </a>
+  <a href="https://react.dev" target="_blank">
+    <img src={viteLogo} className="logo react" alt="React logo" />
+  </a>
+  <a href="https://react.dev" target="_blank">
+    <img src={reactLogo} className="logo react" alt="React logo" />
+  </a>
+  <a href="https://react.dev" target="_blank">
+    <img src={viteLogo} className="logo react" alt="React logo" />
+  </a>
+</div>);
 }
 
 function App() {
@@ -35,7 +103,9 @@ function App() {
       <p className="read-the-docs">
         Click on the Luke and Ethan faces to learn more
       </p>
-      <MagicButton />
+      <MagicButtons />
+      <ZineRack />
+      <MoreImages />
     </>
   )
 }
