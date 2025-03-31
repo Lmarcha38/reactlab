@@ -3,6 +3,12 @@ import reactLogo from './assets/ethanbotton.png'
 import viteLogo from './assets/me.png'
 import './App.css'
 
+function MagicButton() {
+  return (
+    <button>Magic</button>
+  );
+}
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -29,6 +35,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Luke and Ethan faces to learn more
       </p>
+      <MagicButton />
     </>
   )
 }
